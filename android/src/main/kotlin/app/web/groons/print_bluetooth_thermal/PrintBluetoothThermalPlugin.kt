@@ -143,7 +143,7 @@ class PrintBluetoothThermalPlugin: FlutterPlugin, MethodCallHandler {
       }
     }else if (call.method == "writebytes") {
       val lista: List<Int> = call.arguments as List<Int>
-    var bytes: ByteArray = "\n".toByteArray()
+    var bytes: ByteArray = "".toByteArray()
 
     lista.forEach {
         bytes += it.toByte()
@@ -214,7 +214,7 @@ class PrintBluetoothThermalPlugin: FlutterPlugin, MethodCallHandler {
       }
     }else if (call.method == "writebytesChinese") {
       var lista: List<Int> = call.arguments as List<Int>
-      var bytes: ByteArray = "\n".toByteArray()
+      var bytes: ByteArray = "".toByteArray()
 
       lista.forEach {
         bytes += it.toByte() //Log.d(TAG, "foreah: ${it}")
@@ -412,3 +412,4 @@ class PrintBluetoothThermalPlugin: FlutterPlugin, MethodCallHandler {
     channel.setMethodCallHandler(null)
   }
 }
+
